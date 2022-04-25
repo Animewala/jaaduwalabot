@@ -155,8 +155,8 @@ def get_readable_message():
                 msg += f'\n<b>Added by :</b> <a href="tg://user?id={download.message.from_user.id}">{download.message.from_user.first_name}</a>'
                 reply_to = download.message.reply_to_message    
                 if reply_to:
-                    msg += f"\n<b>Source: <a href='https://t.me/c/{str(download.message.chat.id)[4:]}/{reply_to.message_id}'>Link</a></b>"
-                else:
+                   
+
                     msg += f"\n<b>Source:</b> <a href='https://t.me/c/{str(download.message.chat.id)[4:]}/{download.message.message_id}'>Link</a>"
                     msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
